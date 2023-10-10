@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Calculator</title>
+   <link rel="stylesheet" href="calculator.css">
+  <script src="calculator.js" defer></script>
+</head>
+<body>
+   <div id="outerDive" class="outerDive">
+      
+      <input type="text"  id="input1">
+      <div class="innerDive">
+      <button class="one" id="c" 
+      onclick="currentDisplay='';
+      document.querySelector('#input1').value=currentDisplay;"> C </button>
+      <button class="one" id="one" 
+      onclick="currentDisplay=currentDisplay+'1';
+      document.querySelector('#input1').value=currentDisplay;"> 1</button>
+      <button class="one" id="two" 
+      onclick="currentDisplay=currentDisplay+'2';
+      document.querySelector('#input1').value=currentDisplay;"> 2</button>
+      <button class="one" id="three" 
+      onclick="currentDisplay=currentDisplay+'3';
+      document.querySelector('#input1').value=currentDisplay;"> 3 </button>
+      <button class="one" id="four" 
+      onclick="currentDisplay=currentDisplay+'4';
+      document.querySelector('#input1').value=currentDisplay;"> 4 </button>
+      <button class="one" id="five" 
+      onclick="currentDisplay=currentDisplay+'5';
+      document.querySelector('#input1').value=currentDisplay;"> 5 </button>
+      <button class="one" id="six" 
+      onclick="currentDisplay=currentDisplay+'6';
+      document.querySelector('#input1').value=currentDisplay;"> 6 </button>
+      <button class="one" id="seven" 
+      onclick="currentDisplay=currentDisplay+'7';
+      document.querySelector('#input1').value=currentDisplay;"> 7 </button>
+      <button class="one" id="eight" 
+      onclick="currentDisplay=currentDisplay+'8';
+      document.querySelector('#input1').value=currentDisplay;"> 8 </button>
+      <button class="one" id="nine" 
+      onclick="currentDisplay=currentDisplay+'9';
+      document.querySelector('#input1').value=currentDisplay;"> 9 </button>
+      <button class="one" id="zero" 
+      onclick="currentDisplay=currentDisplay+'0';
+      document.querySelector('#input1').value=currentDisplay;"> 0 </button>
+      <button class="one" id="plus" 
+      onclick="currentDisplay=currentDisplay+'+';
+      document.querySelector('#input1').value=currentDisplay;"> + </button>
+      <button class="one" id="minus" 
+      onclick="currentDisplay=currentDisplay+'-';
+      document.querySelector('#input1').value=currentDisplay;"> - </button>
+      <button class="one" id="multi" 
+      onclick="currentDisplay=currentDisplay+'*';
+      document.querySelector('#input1').value=currentDisplay;"> * </button>
+      <button class="one" id="divide" 
+      onclick="currentDisplay=currentDisplay+'/';
+      document.querySelector('#input1').value=currentDisplay;"> / </button>
+      <button class="one" id="equal" 
+      onclick="
+      let result=eval(currentDisplay);
+      currentDisplay=result;
+      document.querySelector('#input1').value=currentDisplay;"> = </button>
+      <button class="one" id="dot" 
+      onclick="currentDisplay=currentDisplay+'.';
+      document.querySelector('#input1').value=currentDisplay;"> . </button>
+      </div>
+      <button class="backgroundChange" onclick="">Click Here to change Background Image</button>
+   </div>
+   
+</body>
+</html>

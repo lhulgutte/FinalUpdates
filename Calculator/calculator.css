@@ -1,0 +1,116 @@
+body{
+   /* background-image: url("pexels-photo-259915.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    margin-left: 20px;
+   /* display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-content: center;
+    flex-wrap: wrap; */
+}
+.backgroundChange{
+    width: 200px;
+    background-color:rgb(231, 218, 218);
+    margin-top: 20px;
+}
+
+.outerDive{
+    height: 500px;
+    width: 250px;
+    background-color:transparent;
+    margin: 50px;
+    /*border: 5px solid black;*/
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-content: center;
+    flex-wrap: wrap; 
+}
+#input1{
+    font-size: 40px;
+    width: 200px;
+    border-radius: 2px;
+    text-align: right;
+    background-color:transparent;
+}
+.innerDive{
+    padding: 10px;
+    height: 300px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.one{
+    border: 1px solid grey;
+    height: 55px;
+    width: 55px;
+    margin: 4px;
+    margin-top: 0px;
+    font-size: 19px;
+    font-weight: 545;
+    background-color:gray;
+    border-radius: 3px;
+    border: 2px solid black;    
+}
+
+
+.one:hover{
+    background-color: rgb(175, 172, 172);
+}
+#c{
+    order: 1;
+}
+#one{
+    order:2;
+}
+#two{
+    order:3 ;
+}
+#plus{
+    order:4 ;
+}
+#three{
+    order: 5;
+}
+#four{
+    order: 6;
+}
+#minus{
+    order: 7;
+}
+#five{
+    order: 8;
+}
+#six{
+    order: 9;
+}
+#multi{
+    order:10 ;
+}
+#seven{
+    order:11 ;
+}
+#eight{
+    order:12 ;
+}
+#divide{
+    order:13 ;
+}
+#equal{
+    order: 14;
+}
+#nine{
+    order:15;
+}
+#zero{
+    order:16 ;
+}
+#dot{
+    order:17 ;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="hello">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <title>Object Lister</title>
+</head>
+<body>
+      <div class="container m-2">
+       <div id="main" class="card card-body w-50 bg-success">
+        <h2 class="title">Add User</h2>
+        <form id="form" >
+            <div class="my-2 ">
+          <div class="my-2">
+          <label for="email" ><b>Name:</b></label>
+          <input type="text" style="width: 100%;" id="username">
+        </div>
+        <div class="my-2 ">
+          <label for="email" ><b>Email</b></label>
+          <input type="text"style="width: 100%;" id="useremail">
+        </div>
+          <input type="submit" class="btn btn-primary my-2 " style="width: 100%;" value="Submit" id="submit1">
+          
+          <input type="submit" class="btn btn-warning my-2 " style="width: 100%;" value="get Data" id="submit1" onclick="getdata()">
+          <table>
+            <thead id="tab">
+              <tr>
+                <th id="un" class="p-1">username</th> 
+                <th id="ue" class="p-1">useremail</th>
+                <th id="del" class="p-1">Action</th>
+              </tr>
+            </thead>
+            <tbody id="result"></tbody>
+          </table>
+            </div>
+        </form>
+       </div>
+      </div>
+<script src="localstorageDelete.js"> </script>
+</body>
+</html>
+
+
+

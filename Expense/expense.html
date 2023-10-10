@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="hello">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <title>Object Lister</title>
+  <script src="expense.js" defer> </script>
+</head>
+<body>
+      <div class="container m-2">
+       <div id="main" class="card card-body w-50 bg-warning">
+        <h2 class="title">Choose Expense Amount</h2>
+        <form id="form" >
+            <div class="my-2 ">
+          <div class="my-2">
+          <label for="chooseExpenseAmount" ><b>ChooseExpenseAmount</b></label>
+          <input type="number" width: 100%;" id="chooseExpenseAmount">
+        </div>
+        <div class="my-2 ">
+          <label for="chooseDescription" ><b>Choose Description</b></label>
+          <input type="text" style="width: 100%;" id="chooseDescription">
+        </div>
+        <div class="my-2 ">
+            <label for="chooseCategory" ><b>Choose Category</b></label>
+             <select name="Category" id="chooseCategory">
+             <option value="Choose">Choose</option>
+             <option value="volvo">Movie</option>
+             <option value="saab">Food</option>
+             <option value="opel">Cloths Buying</option>
+              <option value="audi">Family Expenses</option>
+           </select>
+          </div>
+          <input type="submit" class="btn btn-primary my-2 " style="width: 100%;" value="Add Expenses" id="addExpenses" >
+          
+          <!--<input type="submit" class="btn btn-warning my-2 " style="width: 100%;" value="Get Expense Detail" class="addExpenses" onclick="getData()"> -->
+         <table>
+            <thead id="tab">
+              <tr>
+                <th id="ue" class="p-1">Expense Amount</th>
+                <th id="ud" class="p-1">Description</th>
+                <th id="uc" class="p-1">Category</th>
+                <th id="del" class="p-1">Edit or Delete Expenses</th>
+              </tr>
+            </thead>
+            <tbody id="result"></tbody>
+          </table>
+            </div>
+        </form>
+       </div>
+      </div>
+</body>
+</html>
+
+
+
