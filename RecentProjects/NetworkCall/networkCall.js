@@ -3,46 +3,20 @@ let form = document.getElementById('form');
 let users = [];
 
 // Load users from Local Storage (if available)
-if (axios
-    .get('https://crudcrud.com/api/92cfedf95c1e4982bc44adbad81936ae/updateData')
-   .then(res =>console.log(res))
-   .catch(err => console.error(err)))
-    {
-         displayUsers();
-    }
+const apiUrl = 'https://crudcrud.com/api/92cfedf95c1e4982bc44adbad81936ae/updateData'; 
 
-// Add user to the users array and update the UI
-submitBtn.addEventListener('click', (e) => {
-  $("#result").empty();
-  e.preventDefault();
-
-  let name = document.getElementById('username').value;
-  let email = document.getElementById('useremail').value;
-
-  if (name && email) {
-    let obj = {
-      name: name,
-      email: email
-    };
-
-    users.push(obj);
+// Function to fetch users from the API
+async function fetchUsers() {
+  try {
+    const response = await axios.get(apiUrl);
+    users = response.data;
     displayUsers();
-
-    // Save updated users array to Local Storage
-    axios
-    .post('https://crudcrud.com/api/92cfedf95c1e4982bc44adbad81936ae/updateData', obj)
-    .then(res =>console.log(res))
-    .catch(err => console.error(err))
-    //localStorage.setItem('obj', JSON.stringify(users));
-    //console.log(JSON.stringify(users));
-   // alert("Your details are stored in localStorage");
-
-    // Clear input fields
-    document.getElementById('username').value = '';
-    document.getElementById('useremail').value = '';
+  } catch (error) {
+    console.error(error);
   }
-});
+}
 
+// Function to display users
 function displayUsers() {
   users.forEach((obj, index) => {
     let res = `
@@ -59,6 +33,40 @@ function displayUsers() {
   });
 }
 
+
+function updateUser(){
+  submitBtn.addEventListener('click', (e) => {
+    $("#result").empty();
+    e.preventDefault();
+  
+    let name = document.getElementById('username').value;
+    let email = document.getElementById('useremail').value;
+  
+    if (name && email) {
+      let obj = {
+        name: name,
+        email: email
+      };
+  
+      users.push(obj);
+      displayUsers();
+  
+      // Save updated users array to Local Storage
+      axios
+      .post(apiUrl, obj)
+      .then(res =>console.log(res))
+      .catch(err => console.error(err))
+  
+      // Clear input fields
+      document.getElementById('username').value = '';
+      document.getElementById('useremail').value = '';
+    }
+  });
+  }
+
+fetchUsers();
+updateUser();
+
 function editUser(index) {
   if (index >= 0 && index < users.length) {
     let newName = prompt("Enter new name:", users[index].name);
@@ -73,16 +81,8 @@ function editUser(index) {
       displayUsers();     
 
       // Save the updated users array to Local Storage
-     // localStorage.setItem('obj', JSON.stringify(users));
-     /*axios
-     //.patch
-     .put('https://crudcrud.com/api/92cfedf95c1e4982bc44adbad81936ae/updateData/652f8ff82e0fb203e853fa17',
-     {users:{
-         title :'updated Todo',
-         completed : true
-     }})
-     .then(res =>console.log(res))
-     .catch(err => console.error(err))*/
+      localStorage.setItem('obj', JSON.stringify(users));
+    }
   }
 }
 
@@ -96,11 +96,6 @@ function deleteUser(index) {
     displayUsers();
 
     // Save the updated users array to Local Storage
-   // localStorage.setItem('obj', JSON.stringify(users));
-   axios
-   .delete('https://crudcrud.com/api/92cfedf95c1e4982bc44adbad81936ae/updateData')
-   .then(res =>console.log(res))
-   .catch(err => console.error(err))
+    localStorage.setItem('obj', JSON.stringify(users));
   }
-}
 }
