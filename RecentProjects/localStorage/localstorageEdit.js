@@ -1,4 +1,5 @@
 let submitBtn = document.getElementById('submit1');
+let getData = document.getElementById('getData');
 let form = document.getElementById('form');
 let users = [];
 

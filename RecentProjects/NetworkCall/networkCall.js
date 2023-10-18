@@ -1,4 +1,5 @@
 let submitBtn = document.getElementById('submit1');
+let getData = document.getElementById('getData');
 let form = document.getElementById('form');
 let users = [];
 
@@ -34,7 +35,7 @@ function displayUsers() {
 }
 
 
-function updateUser(){
+function postUser(){
   submitBtn.addEventListener('click', (e) => {
     $("#result").empty();
     e.preventDefault();
@@ -64,8 +65,8 @@ function updateUser(){
   });
   }
 
-fetchUsers();
-updateUser();
+
+
 
 function editUser(index) {
   if (index >= 0 && index < users.length) {
@@ -86,16 +87,30 @@ function editUser(index) {
   }
 }
 
-function deleteUser(index) {
+async function deleteUser(index) {
   if (index >= 0 && index < users.length) {
-    // Remove the user from the users array at the given index
-    users.splice(index, 1);
+    const userId = users[index]._id; // Replace with the correct field name from your API
 
-    // Update the UI with the updated users array
-    $("#result").empty();
-    displayUsers();
+    try {
+      // Send a DELETE request to the API to delete the user
+      const response = await axios.delete(`${apiUrl}/${userId}`);
 
-    // Save the updated users array to Local Storage
-    localStorage.setItem('obj', JSON.stringify(users));
+      if (response.status === 200) {
+        alert('User deleted successfully');
+
+        // Update the users array by removing the deleted user
+        users.splice(index, 1);
+
+        // Update the UI with the updated users array
+        $("#result").empty();
+        displayUsers();
+      } else {
+        alert('Failed to delete the user');
+      }
+    } catch (error) {
+      console.error( error);
+    }
   }
 }
+postUser();
+fetchUsers();
