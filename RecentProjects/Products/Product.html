@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="hello">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <title>Product Seller</title>
+</head>
+<body>
+      <div class="container-fluid m-2">
+       <div id="main" class="card card-body w-50 bg-secondary">
+        <h2 class="title">Add Items</h2>
+        <form id="form" >
+            <div class="my-2 ">
+          <div class="my-2">
+            <label for="selling_price" ><b>Selling Price</b></label>
+            <input type="text" id="selling_price">
+        </div>
+        <div class="my-2 ">
+            <div class="my-2">
+                <label for="product_name" ><b>Product Name</b></label>
+                <input type="text" id="product_name">
+            </div>
+        </div>
+        <div class="my-2 ">
+            <div class="my-2">
+                <label for="category" ><b>Choose a Category:</b></label>
+                <select id="category">
+                    <option  id="choose2"></option>
+                    <option  id="electronics">Electronics</option>
+                    <option  id="skinCare">Skin Care</option>
+                    <option  id="books">Books</option>
+                   </select>
+            </div>
+        </div>
+    </div>
+          <input type="submit" class="btn my-2 " style="width: 100%;" value="Add Product" id="add_product" onclick="selectItem()">
+          
+          <table>
+            <thead id="tab">
+              <tr>
+                <th id="product_name1" class="p-1">Product Name</th>
+                <th id="selling_price1" class="p-1">Selling Price</th> 
+                <th id="category" class="p-1">Category</th>
+              </tr>
+            </thead>
+            <tbody id="result"></tbody>
+          </table>
+            </div>
+        </form>
+       </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+<script src="product.js"> </script>
+</body>
+</html>
+
+
+

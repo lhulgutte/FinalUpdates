@@ -1,11 +1,8 @@
 
-let submitBtn = document.getElementById('submit1');
-let getData = document.getElementById('getData');
-let form = document.getElementById('form');
 let users = [];
 
 // Load users from Local Storage (if available)
-const apiUrl = 'https://crudcrud.com/api/92cfedf95c1e4982bc44adbad81936ae/updateData';
+const apiUrl = 'https://crudcrud.com/api/99bd602b5c6943f8ab6bd7d857402069/product';
 
 // Function to fetch users from the API
 async function fetchUsers() {
