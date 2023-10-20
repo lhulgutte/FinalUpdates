@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="hello">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <title>Stationary</title>
+</head>
+<body>
+      <div class="container-fluid m-2">
+       <div id="main" class="card card-body w-50 bg-success">
+        <h2 class="title">Add Items</h2>
+        <form id="form" >
+            <div class="my-2 ">
+          <div class="my-2">
+            <label for="item_name" ><b>Items:</b></label>
+            <select id="item_name">
+                <option id="choose" value="Choose" ></option>
+                <option id="rice" value="Rice">Rice</option>
+                <option id="cold_drink" value="Cold Drink">Cold Drink</option>
+                <option id="chips" value="Chips">Chips</option>
+                <option id="chocolate" value="Chocolate">Chocolate</option>
+                <option id="cookies" value="Cookies">Cookies</option>
+            </select>
+        </div>
+        <div class="my-2 ">
+            <div class="my-2">
+                <label for="item_description" ><b>Description:</b></label>
+                <select id="item_description">
+                    <option for="choose" id="choose1" onclick=""></option>
+                    <option for="rice"  id="rice1" onclick=""> Basmati Rice</option>
+                    <option for="cold_drink" id="cold_drink1" onclick="">Pepsi</option>
+                    <option for="chips" id="chips1" onclick="">Lays</option>
+                    <option for="]chocolate" id="]chocolate1" onclick=""> Dairy Milk</option>
+                    <option for="cookies" id="cookies1" onclick="">Good Day</option>
+                   </Select>
+            </div>
+        </div>
+        <div class="my-2 ">
+            <div class="my-2">
+                <label for="price" ><b>price per Kg:</b></label>
+                <select id="price">
+                    <option for="choose" id="choose2"></option>
+                    <option for="rice"  id="rice2">100</option>
+                    <option for="cold_drink" id="cold_drink2">20</option>
+                    <option for="chips" id="chips2">10</option>
+                    <option for="]chocolate" id="chocolate2">50</option>
+                    <option for="cookies" id="cookies2">15</option>
+                   </select>
+            </div>
+        </div>
+        <div class="my-2">
+            <label for="quantity" ><b>Quantity:</b></label>
+            <input id="quantity" type="number">
+        </div>
+    </div>
+          <input type="submit" class="btn btn-primary my-2 " style="width: 100%;" value="Add Item" id="add_item" onclick="selectItem()">
+          
+          <table>
+            <thead id="tab">
+              <tr>
+                <th id="item" class="p-1">Item</th> 
+                <th id="description" class="p-1">Decription</th>
+                <th id="price" class="p-1">Price</th>
+                <th id="quantity" class="p-1">Quantity</th>
+              </tr>
+            </thead>
+            <tbody id="result"></tbody>
+          </table>
+            </div>
+        </form>
+       </div>
+      </div>
+<script src="stationary.js"> </script>
+</body>
+</html>
+
+
+
